@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="pane" prefHeight="224.0" prefWidth="307.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Tab2Controller">
+   <children>
+      <Label fx:id="lbl_2" layoutX="125.0" layoutY="57.0" text="not clicked" />
+      <Button fx:id="btn2" layoutX="103.0" layoutY="100.0" mnemonicParsing="false" onAction="#resetCounter1" text="Reset Counter 1" />
+   </children>
+</AnchorPane>
