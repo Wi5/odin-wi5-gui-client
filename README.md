@@ -1,14 +1,17 @@
-JavaFX-Tabs
-===========
+odin-wi5-gui-client
+===================
 
-This Tutorial shows how to handle Tabs. In each tab there is a fxml included. Each included fxml gets a fx:id, the 
-maincontroller gets access to the subcontroller. The rule is that if your fx:include has fx:id="x", then the controller 
-from the corresponding FXML file can be injected into a variable with name xController.
+This is a Java-based client that connects to a Wi-5 controller, and can show the current status of the network.
 
-Furthermore this Tutorial shows how u can start a method of a subcontroller from another subcontroller. Therefore a 
-public static FXMLLoader has to be created in the Main.java, this FXMLLoader loads the Main.fxml as usual.
-From the loader u get the MainController which grants you access to the other subcontrollers.
+The Wi-5 controller MUST run the application SmartApSelection of the GUI branch (see https://github.com/Wi5/odin-wi5-controller/tree/GUI).
 
-If you fetch this Tutorial also have a look at the FXML-files.
+You have to indicate the IP address of the Wi-5 controller in the file `RequestHandler.java` https://github.com/Wi5/odin-wi5-gui-client/blob/master/src/httpRequestHandler/RequestHandler.java
 
-Have Fun
+You can use e.g. Eclipse for running the client.
+
+These are the steps:
+
+- Start the Wi-5 controller with SmartApSelection. Your console MUST support X windows.
+- In the Wi-5 controller, you will see a window telling you to start the Agents and click OK.
+- Start all the agents and click Ok.
+- In the Wi-5 controller, you will see another window telling you to click once the clients have started.
