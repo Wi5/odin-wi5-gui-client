@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.MainController">
+	<children>
+		<TabPane fx:id="pane" prefHeight="468.0" prefWidth="598.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+			<tabs>
+				<Tab fx:id="tab1" onSelectionChanged="#handleTab1Change" text="Network">
+					<content>
+						<fx:include fx:id="tab1content" source="tab1.fxml" />
+					</content>
+				</Tab>
+				<Tab fx:id="tab3" text="Clientes">
+					<content>
+						<fx:include fx:id="tab3content" source="tab3.fxml" />
+					</content>
+				</Tab>
+				<Tab fx:id="tab5" onSelectionChanged="#handleTab5Change" text="Estadisticas">
+					<content>
+						<fx:include fx:id="tab5content" source="tab5.fxml" />
+					</content>
+				</Tab>
+			</tabs>
+		</TabPane>
+	</children>
+</AnchorPane>
