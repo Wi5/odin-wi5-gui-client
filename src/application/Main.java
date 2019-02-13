@@ -30,7 +30,7 @@ public class Main extends Application {
 	public void start(Stage primaryStage) {
 		try {	
 			
-			//Check Odin Application is up
+			//Check if the Wi-5 controller is up
 			Boolean isAlive = RequestHandler.pingURL(RequestHandler.URL + "/odin/params/json", 200);
 			
 			if(!isAlive) {
@@ -43,7 +43,7 @@ public class Main extends Application {
 			
 		    System.setProperty("gs.ui.renderer", "org.graphstream.ui.j2dviewer.J2DGraphRenderer");			
 			
-			primaryStage.setTitle("Odin - Pruebas");			
+			primaryStage.setTitle("Odin - Wi5 GUI");			
 		
 			primaryStage.getIcons().add(new Image("file:resources/icon.jpg"));
 			primaryStage.setScene(scene);
@@ -90,15 +90,17 @@ public class Main extends Application {
 	private void AlertServerNotUp() {
 		Alert alert = new Alert(AlertType.INFORMATION);
 		
-		alert.setTitle("OdinMaster not up");
+		alert.setTitle("Wi-5 controller not up");
 		alert.setHeaderText(null);
-		alert.setContentText("El servidor no esta lanzado.");
+		alert.setContentText(	"Cannot ping the Wi-5 controller with the URL "+ 
+								RequestHandler.URL +
+								"/odin/params/json" +
+								". Please check if it is compatible and started. Finishing program");
 		alert.showAndWait();
 		
 		if (alert.getResult() == ButtonType.OK) {
-			System.out.println("Saliendo");
+			System.out.println("Finishing program");
 		    System.exit(0);
 		}
 	}
-	
 }
