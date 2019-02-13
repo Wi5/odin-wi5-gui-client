@@ -48,11 +48,11 @@
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
-                        <Label fx:id="Label1" text="Time to start (sec)" GridPane.rowIndex="1">
+                        <Label fx:id="Label1" text="Time to start (msec)" GridPane.rowIndex="1">
                            <font>
                               <Font name="System Bold" size="12.0" />
                            </font></Label>
-                        <Label fx:id="Label2" text="Scanning Interval" GridPane.rowIndex="3">
+                        <Label fx:id="Label2" text="Scanning Interval (msec)" GridPane.rowIndex="3">
                            <font>
                               <Font name="System Bold" size="12.0" />
                            </font></Label>

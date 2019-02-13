@@ -57,7 +57,7 @@
                             <NumberAxis side="LEFT" />
                           </yAxis>
                         </BarChart>
-                        <BarChart fx:id="avgRateClient" alternativeColumnFillVisible="true" prefHeight="400.0" prefWidth="500.0" style="-fx-bar-fill: green;" title="Average potency" GridPane.rowIndex="1">
+                        <BarChart fx:id="avgRateClient" alternativeColumnFillVisible="true" prefHeight="400.0" prefWidth="500.0" style="-fx-bar-fill: green;" title="Average power (RSSI)" GridPane.rowIndex="1">
                            <xAxis>
                               <CategoryAxis />
                            </xAxis>

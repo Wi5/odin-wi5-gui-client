@@ -75,7 +75,7 @@
                            </font></Label>
                         <Label fx:id="Agent" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                         <Label fx:id="Channel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                        <Label fx:id="Potency" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <Label fx:id="Potency" text="Power (RSSI)" GridPane.columnIndex="1" GridPane.rowIndex="5" />
                         <Label fx:id="LastHeard_label" text="Last time heard" GridPane.rowIndex="6">
                            <font>
                               <Font name="System Bold" size="12.0" />

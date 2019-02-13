@@ -17,12 +17,12 @@
 						<fx:include fx:id="tab1content" source="tab1.fxml" />
 					</content>
 				</Tab>
-				<Tab fx:id="tab3" text="Clientes">
+				<Tab fx:id="tab3" text="Clients">
 					<content>
 						<fx:include fx:id="tab3content" source="tab3.fxml" />
 					</content>
 				</Tab>
-				<Tab fx:id="tab5" onSelectionChanged="#handleTab5Change" text="Estadisticas">
+				<Tab fx:id="tab5" onSelectionChanged="#handleTab5Change" text="Statistics">
 					<content>
 						<fx:include fx:id="tab5content" source="tab5.fxml" />
 					</content>

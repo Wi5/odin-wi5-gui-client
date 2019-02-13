@@ -185,7 +185,7 @@ public class Tab3Controller implements Initializable{
 			Channel.setText(Integer.toString(1));
 			Channel.setVisible(false);
 
-			Potency.setText("-15");	
+			Potency.setText(Integer.toString(0));	
 			Potency.setVisible(false);
 			
 			LastHeard.setText("");
@@ -255,8 +255,8 @@ public class Tab3Controller implements Initializable{
 		Channel.setText(Integer.toString(client.getChannel()));
 		Channel.setVisible(true);
 		
-		Potency_label.setText("Avg Potency");
-		Potency.setText("-40 dbms");	
+		Potency_label.setText("Avg Power (RSSI)");
+		Potency.setText(Double.toString(client.getPotency()) + " dbms");	
 		Potency.setVisible(true);
 
 		LastHeard_label.setVisible(false);
@@ -360,8 +360,8 @@ public class Tab3Controller implements Initializable{
  		grid.setVgap(10);
  		
 	    for (int i = 0; i < agents_number; i++) {
-			grid.add(new Label("Access Point: 192.168.1.14"), 0,i);
-			grid.add(new Label(":+ -40 dbms"), 1, i);
+			grid.add(new Label("Access Point: " +matrix.getAgents()[i]), 0, i);
+			grid.add(new Label("heard the client with: "+dbms[index][i]+" dbms"), 1, i);
 		}
 		dialog.getDialogPane().setContent(grid);
 
@@ -376,6 +376,7 @@ public class Tab3Controller implements Initializable{
 		List<String> agentsAndPotency =  new ArrayList<>();
 		
 	    int index = -1;
+
 	    for (int i = 0; i < matrix.getClients().length; i++) {
 	    	System.out.println( client.getmAC()+"-----" +matrix.getClients()[i]);
 	        if (matrix.getClients()[i].equals(client.getmAC())) {
