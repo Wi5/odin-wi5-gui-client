@@ -15,3 +15,12 @@ These are the steps:
 - In the Wi-5 controller, you will see a window telling you to start the Agents and click OK.
 - Start all the agents and click Ok.
 - In the Wi-5 controller, you will see another window telling you to click once the clients have started.
+
+Video with two handoffs:
+
+[![Handoffs](https://i.ytimg.com/vi/27PsX-Cd-us/hqdefault.jpg)](https://youtu.be/27PsX-Cd-us)
+
+
+Video showing the statistics:
+
+[![Showing the statistics](https://i.ytimg.com/vi/56-M2iTVCAA/hqdefault.jpg)](https://youtu.be/56-M2iTVCAA)
