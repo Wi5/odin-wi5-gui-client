@@ -184,8 +184,7 @@ public class AgentManagerResource {
 
 	
 	public static List<MACAddressHeard> getScanChannel(AccessPoint ap, int channel, int time) throws AgentBusyException {
-		try {		
-			
+		try {
 			String AgentsURL = RequestHandler.URL + "/odin/agents/scan/json";
 
 			java.net.URL url;

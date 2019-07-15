@@ -7,8 +7,6 @@ import java.util.Map.Entry;
 import java.util.ResourceBundle;
 
 import httpRequestHandler.AgentManagerResource;
-import httpRequestHandler.NetworkManagerResource;
-import httpRequestHandler.NetworkManagerResource.PassiveMatrix;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -71,8 +69,6 @@ public class Tab5Controller implements Initializable{
 		Map<String, Double> airTimePerClient = new HashMap<>();
 		
 		Map<String, Map<String, String>> txResults = AgentManagerResource.getTxResults(apSelected);
-		PassiveMatrix passive = NetworkManagerResource.getMatrixPasive();
-		
 		if(txResults == null) return;
 		
 		for (Entry<String, Map<String, String>> entry : txResults.entrySet())
@@ -98,17 +94,13 @@ public class Tab5Controller implements Initializable{
 
 		}
 		
-		int i = 0; 
-		boolean found = false;
-		while(!false) {
-			if(passive.getAgents()[i] == apSelected) {
-				found = true;
-				break;
-			}
-		}
+		avgRateSerie = new XYChart.Series<String, Number>();
 		
-		
-		avgRateSerie = new XYChart.Series<String, Number>();	
+		avgRateSerie.getData().add(new XYChart.Data<String, Number>("08-0A-A3-0B-17-3A", 100-70));
+		avgRateSerie.getData().add(new XYChart.Data<String, Number>("B6-C1-0A-29-83-8D", 100-30));
+		avgRateSerie.getData().add(new XYChart.Data<String, Number>("D9-06-E4-52-AC-76", 100-20));
+		avgRateSerie.getData().add(new XYChart.Data<String, Number>("8F-BB-FE-7A-AC-46", 100-20));
+		avgRateSerie.getData().add(new XYChart.Data<String, Number>("55-CE-85-03-4F-68", 100-5));  		
 		
 		packetsClient.getData().addAll(packetsSerie);
 		avgRateClient.getData().addAll(avgRateSerie);

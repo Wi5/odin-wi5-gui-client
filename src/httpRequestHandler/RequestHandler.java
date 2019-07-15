@@ -21,7 +21,7 @@ public class RequestHandler {
   
     public static final Gson GSON = new Gson();    
     
-    public static final String URL = "http://155.210.157.148:8080";
+    public static final String URL = "http://155.210.157.173:8080";
     //public static final String URL = "http://localhost:8080";
 
 	private static final int BUFFER_SIZE = 4096;
